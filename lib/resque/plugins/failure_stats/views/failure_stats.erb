@@ -1,0 +1,37 @@
+<h1>Failure stats</h1>
+
+<h2>By class</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Class</th>
+      <th>Count</th>
+    </tr>
+  </thead>
+  <tbody>
+  <% @fbc.each do |klass, failures| %>
+    <tr>
+      <td><%= klass %></td>
+      <td><%= failures.size %></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+
+<h2>By exception</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Exception</th>
+      <th>Count</th>
+    </tr>
+  </thead>
+  <tbody>
+  <% @fbe.each do |exception, failures| %>
+    <tr>
+      <td><%= exception %></td>
+      <td><%= failures.size %></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
